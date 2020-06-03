@@ -1042,7 +1042,7 @@ inline void queryCacheSizes_intel_codes(int& l1, int& l2, int& l3)
     l3 = 0;
   l1 *= 1024;
   l2 *= 1024;
-  l3 *= 1024;    
+  l3 *= 1024;
 }
 
 inline void queryCacheSizes_intel(int& l1, int& l2, int& l3, int max_std_funcs)
