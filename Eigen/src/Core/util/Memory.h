@@ -966,10 +966,9 @@ inline void queryCacheSizes_intel_direct(int& l1, int& l2, int& l3, int max_std_
 
 inline void queryCacheSizes_intel_codes(int& l1, int& l2, int& l3)
 {
-  l1 = l2 = l3 = 0; 
-
   int abcd[4];
   abcd[0] = abcd[1] = abcd[2] = abcd[3] = 0;
+  l1 = l2 = l3 = 0;
 
   EIGEN_CPUID(abcd,0x00000002,0);
   unsigned char * bytes = reinterpret_cast<unsigned char *>(abcd)+2;
