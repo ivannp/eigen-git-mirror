@@ -1090,7 +1090,7 @@ inline void queryCacheSizes(int& l1, int& l2, int& l3)
 
   // identify the CPU vendor
   EIGEN_CPUID(abcd,0x0,0);
-  int max_std_funcs = abcd[1];
+  int max_std_funcs = abcd[0];
   if(cpuid_is_vendor(abcd,GenuineIntel))
     queryCacheSizes_intel(l1,l2,l3,max_std_funcs);
   else if(cpuid_is_vendor(abcd,AuthenticAMD) || cpuid_is_vendor(abcd,AMDisbetter_))
